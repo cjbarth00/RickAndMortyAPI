@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CharacterLocation: Codable {
+public struct CharacterLocation: Codable {
     var name: String
     var url: String
 }

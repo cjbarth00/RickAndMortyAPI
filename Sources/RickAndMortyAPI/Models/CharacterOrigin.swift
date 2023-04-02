@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CharacterOrigin: Codable {
+public struct CharacterOrigin: Codable {
     var name: String
     var url: String
 }

@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Pagination: Decodable {
+public struct Pagination: Decodable {
     var count: Int
     var pages: Int?
     var next: String?
     var prev: String?
 }
 
-struct PaginatedResponse<T: Decodable>: Decodable {
+public struct PaginatedResponse<T: Decodable>: Decodable {
     var info: Pagination?
     var results: [T]
 }
