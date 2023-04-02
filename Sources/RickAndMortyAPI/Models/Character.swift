@@ -7,8 +7,7 @@
 
 import Foundation
 
-public struct Character: Equatable, Codable, Identifiable {
-    
+public struct Character: Codable, Identifiable, Hashable {
     public var id: Int
     public var name: String
     public var status: String
@@ -21,10 +20,16 @@ public struct Character: Equatable, Codable, Identifiable {
     public var episode: [String]
     public var url: String
     public var created: String
-}
-
-extension Character {
-    public static func == (lhs: Character, rhs: Character) -> Bool {
+    
+    static public func == (lhs: Character, rhs: Character) -> Bool {
         return lhs.id == rhs.id
+    }
+    
+    var identifier: String {
+        return UUID().uuidString
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        return hasher.combine(identifier)
     }
 }
