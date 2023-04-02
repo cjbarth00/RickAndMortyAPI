@@ -8,16 +8,16 @@
 import Foundation
 
 public struct Character: Codable {
-    var id: Int
-    var name: String
-    var status: String
-    var species: String
-    var type: String
-    var gender: String
-    var origin: CharacterOrigin
-    var location: CharacterLocation
-    var image: String
-    var episode: [String]
-    var url: String
-    var created: String
+    public var id: Int
+    public var name: String
+    public var status: String
+    public var species: String
+    public var type: String
+    public var gender: String
+    public var origin: CharacterOrigin
+    public var location: CharacterLocation
+    public var image: String
+    public var episode: [String]
+    public var url: String
+    public var created: String
 }

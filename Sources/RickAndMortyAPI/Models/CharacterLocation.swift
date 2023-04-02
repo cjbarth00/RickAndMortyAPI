@@ -8,6 +8,6 @@
 import Foundation
 
 public struct CharacterLocation: Codable {
-    var name: String
-    var url: String
+    public var name: String
+    public var url: String
 }

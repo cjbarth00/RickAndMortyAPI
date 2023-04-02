@@ -15,6 +15,9 @@ public enum APIErrors: Error {
 }
 
 public struct APIClient {
+    
+    public init() { }
+    
     public func request<T: Decodable>(route: Routable, responseType: T.Type) async -> Result<T, Error> {
         guard let url = URL(string: route.path) else { return .failure(APIErrors.failedToGetPath) }
         

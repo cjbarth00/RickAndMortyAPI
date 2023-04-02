@@ -8,13 +8,13 @@
 import Foundation
 
 public struct Pagination: Decodable {
-    var count: Int
-    var pages: Int?
-    var next: String?
-    var prev: String?
+    public var count: Int
+    public var pages: Int?
+    public var next: String?
+    public var prev: String?
 }
 
 public struct PaginatedResponse<T: Decodable>: Decodable {
-    var info: Pagination?
-    var results: [T]
+    public var info: Pagination?
+    public var results: [T]
 }
