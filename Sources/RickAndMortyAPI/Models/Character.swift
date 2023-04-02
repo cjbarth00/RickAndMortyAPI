@@ -7,7 +7,8 @@
 
 import Foundation
 
-public struct Character: Codable, Identifiable {
+public struct Character: Equatable, Codable, Identifiable {
+    
     public var id: Int
     public var name: String
     public var status: String
@@ -20,4 +21,10 @@ public struct Character: Codable, Identifiable {
     public var episode: [String]
     public var url: String
     public var created: String
+}
+
+extension Character {
+    public static func == (lhs: Character, rhs: Character) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
